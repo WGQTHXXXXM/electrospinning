@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?neo version='2.0.463.0'?>
+<NeoItem d1p1:Serializer="Neo.ApplicationFramework.Common.Serialization.ObjectSerializer" xmlns:d1p1="urn:Neo.ApplicationFramework.Serializer">
+  <Object d1p1:type="Neo.ApplicationFramework.Common.MessageLibrary.MessageLibrary, CommonCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="TextLibrary">
+    <Groups>
+      <Object d1p1:type="Neo.ApplicationFramework.Common.MessageLibrary.MessageGroup, CommonCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="Group1" d1p1:Site.Name="Group1">
+        <Messages>
+          <Object d1p1:type="Neo.ApplicationFramework.Common.MessageLibrary.MessageItem, CommonCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Message="ASD" StartValue="1" EndValue="0" Name="Group1_MessageItem0" DisplayName="MessageItem0" GroupName="Group1" d1p1:Site.Name="Group1_MessageItem0" />
+        </Messages>
+      </Object>
+    </Groups>
+  </Object>
+</NeoItem>

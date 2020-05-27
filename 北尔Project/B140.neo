@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?neo version='2.0.463.0'?>
+<NeoItem d1p1:Serializer="Neo.ApplicationFramework.Common.Serialization.ObjectSerializer" xmlns:d1p1="urn:Neo.ApplicationFramework.Serializer">
+  <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.DataSourceContainer, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" ID="1107" Driver="Galil_DMC_Pre2.Galil_DMC_Pre2.1" Servername="Beijer.InprocessNeo.1" Node="" Url="" TargetInfoString="iXDeveloper;WinCe6;Beijer;Exter iX;T10A;" d1p1:Site.Name="B140">
+    <OpcUaNamespaceInfos>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcUaClient.OpcUaNamespaceInfos, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" />
+    </OpcUaNamespaceInfos>
+    <DataItems>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.DataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="DataItem1">
+        <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.DataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+          <Parameter Name="Name">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="DataItem1" />
+          </Parameter>
+          <Parameter Name="ItemID">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="RS" />
+          </Parameter>
+          <Parameter Name="DataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="BIT" />
+          </Parameter>
+          <Parameter Name="Size">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="Offset">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="Gain">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="IndexRegisterNumber">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="LogToAuditTrail">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+        </InstanceDescriptor>
+      </Object>
+    </DataItems>
+  </Object>
+</NeoItem>

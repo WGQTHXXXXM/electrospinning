@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?neo version='2.0.463.0'?>
+<NeoItem d1p1:Serializer="Neo.ApplicationFramework.Common.Serialization.ObjectSerializer" xmlns:d1p1="urn:Neo.ApplicationFramework.Serializer">
+  <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalController, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="Tags">
+    <GlobalDataItems>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Description="" d1p1:Site.Name="RS">
+        <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+          <Parameter Name="Name">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="RS" />
+          </Parameter>
+          <Parameter Name="DataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="BIT" />
+          </Parameter>
+          <Parameter Name="Size">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="Offset">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="Gain">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="IndexRegisterNumber">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="LogToAuditTrail">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="TriggerName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Value Change" />
+          </Parameter>
+          <Parameter Name="AccessRight">
+            <Object d1p1:type="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+              <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="Write" MemberType="Field" />
+            </Object>
+          </Parameter>
+          <Parameter Name="PollGroupName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="PollGroup1" />
+          </Parameter>
+          <Parameter Name="AlwaysActive">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="NonVolatile">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="GlobalDataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="DEFAULT" />
+          </Parameter>
+          <Parameter Name="Description">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="" />
+          </Parameter>
+          <Parameter Name="ArraySize">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+        </InstanceDescriptor>
+        <GlobalDataSubItems>
+          <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+            <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+              <Parameter Name="InitialValue">
+                <Object d1p1:type="Neo.ApplicationFramework.Interfaces.VariantValue, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+                  <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.VariantValue, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+                    <Parameter Name="Value">
+                      <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="" />
+                    </Parameter>
+                  </InstanceDescriptor>
+                </Object>
+              </Parameter>
+              <Parameter Name="ArrayIndex">
+                <Object d1p1:type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+              </Parameter>
+              <Parameter Name="Keys">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="B140" />
+                </Object>
+              </Parameter>
+              <Parameter Name="Values">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="DataItem1" />
+                </Object>
+              </Parameter>
+              <Parameter Name="PreventDuplicateEvents">
+                <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="True" />
+              </Parameter>
+            </InstanceDescriptor>
+          </Object>
+        </GlobalDataSubItems>
+        <AccessRights>
+          <KeyValuePair>
+            <Key>
+              <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="B140" />
+            </Key>
+            <Value>
+              <Object d1p1:type="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+                <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="None" MemberType="Field" />
+              </Object>
+            </Value>
+          </KeyValuePair>
+        </AccessRights>
+      </Object>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="RS1">
+        <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+          <Parameter Name="Name">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="RS1" />
+          </Parameter>
+          <Parameter Name="DataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="BIT" />
+          </Parameter>
+          <Parameter Name="Size">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="Offset">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="Gain">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="IndexRegisterNumber">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="LogToAuditTrail">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="TriggerName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Value Change" />
+          </Parameter>
+          <Parameter Name="AccessRight">
+            <Object d1p1:type="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+              <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="ReadWrite" MemberType="Field" />
+            </Object>
+          </Parameter>
+          <Parameter Name="PollGroupName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="PollGroup1" />
+          </Parameter>
+          <Parameter Name="AlwaysActive">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="NonVolatile">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="GlobalDataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="DEFAULT" />
+          </Parameter>
+          <Parameter Name="Description" Value="" />
+          <Parameter Name="ArraySize">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+        </InstanceDescriptor>
+        <GlobalDataSubItems>
+          <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+            <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+              <Parameter Name="InitialValue" Value="" />
+              <Parameter Name="ArrayIndex">
+                <Object d1p1:type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+              </Parameter>
+              <Parameter Name="Keys">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Controller1" />
+                </Object>
+              </Parameter>
+              <Parameter Name="Values">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="DataItem1" />
+                </Object>
+              </Parameter>
+              <Parameter Name="PreventDuplicateEvents">
+                <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="True" />
+              </Parameter>
+            </InstanceDescriptor>
+          </Object>
+        </GlobalDataSubItems>
+      </Object>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="RS2">
+        <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+          <Parameter Name="Name">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="RS2" />
+          </Parameter>
+          <Parameter Name="DataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="BIT" />
+          </Parameter>
+          <Parameter Name="Size">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="Offset">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="Gain">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="IndexRegisterNumber">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="LogToAuditTrail">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="TriggerName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Value Change" />
+          </Parameter>
+          <Parameter Name="AccessRight">
+            <Object d1p1:type="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+              <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="ReadWrite" MemberType="Field" />
+            </Object>
+          </Parameter>
+          <Parameter Name="PollGroupName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="PollGroup1" />
+          </Parameter>
+          <Parameter Name="AlwaysActive">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="NonVolatile">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="GlobalDataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="DEFAULT" />
+          </Parameter>
+          <Parameter Name="Description" Value="" />
+          <Parameter Name="ArraySize">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+        </InstanceDescriptor>
+        <GlobalDataSubItems>
+          <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+            <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+              <Parameter Name="InitialValue" Value="" />
+              <Parameter Name="ArrayIndex">
+                <Object d1p1:type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+              </Parameter>
+              <Parameter Name="Keys">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Controller2" />
+                </Object>
+              </Parameter>
+              <Parameter Name="Values">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="DataItem1" />
+                </Object>
+              </Parameter>
+              <Parameter Name="PreventDuplicateEvents">
+                <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="True" />
+              </Parameter>
+            </InstanceDescriptor>
+          </Object>
+        </GlobalDataSubItems>
+      </Object>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" d1p1:Site.Name="RS3">
+        <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+          <Parameter Name="Name">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="RS3" />
+          </Parameter>
+          <Parameter Name="DataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="BIT" />
+          </Parameter>
+          <Parameter Name="Size">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="Offset">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="Gain">
+            <Object d1p1:type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+          <Parameter Name="IndexRegisterNumber">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+          </Parameter>
+          <Parameter Name="LogToAuditTrail">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="TriggerName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Value Change" />
+          </Parameter>
+          <Parameter Name="AccessRight">
+            <Object d1p1:type="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+              <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Interfaces.AccessRights, InterfacesCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name="ReadWrite" MemberType="Field" />
+            </Object>
+          </Parameter>
+          <Parameter Name="PollGroupName">
+            <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="PollGroup1" />
+          </Parameter>
+          <Parameter Name="AlwaysActive">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="NonVolatile">
+            <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="False" />
+          </Parameter>
+          <Parameter Name="GlobalDataType">
+            <Object d1p1:type="Neo.ApplicationFramework.Interop.DataSource.BEDATATYPE, DataSourceInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" primitive.value="DEFAULT" />
+          </Parameter>
+          <Parameter Name="Description" Value="" />
+          <Parameter Name="ArraySize">
+            <Object d1p1:type="System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="1" />
+          </Parameter>
+        </InstanceDescriptor>
+        <GlobalDataSubItems>
+          <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null">
+            <InstanceDescriptor DeclaringType="Neo.ApplicationFramework.Tools.OpcClient.GlobalDataSubItem, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Name=".ctor" MemberType="Constructor">
+              <Parameter Name="InitialValue" Value="" />
+              <Parameter Name="ArrayIndex">
+                <Object d1p1:type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="0" />
+              </Parameter>
+              <Parameter Name="Keys">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="Controller3" />
+                </Object>
+              </Parameter>
+              <Parameter Name="Values">
+                <Object d1p1:arrayLength="1" d1p1:type="System.String[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <Object d1p1:type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="DataItem1" />
+                </Object>
+              </Parameter>
+              <Parameter Name="PreventDuplicateEvents">
+                <Object d1p1:type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" primitive.value="True" />
+              </Parameter>
+            </InstanceDescriptor>
+          </Object>
+        </GlobalDataSubItems>
+      </Object>
+    </GlobalDataItems>
+    <PollGroups>
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.PollGroup, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Interval="500" Name="PollGroup1" d1p1:Site.Name="PollGroup1" />
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.PollGroup, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Interval="500" Name="PollGroup2" d1p1:Site.Name="PollGroup2" />
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.PollGroup, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Interval="500" Name="PollGroup3" d1p1:Site.Name="PollGroup3" />
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.PollGroup, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Interval="500" Name="PollGroup4" d1p1:Site.Name="PollGroup4" />
+      <Object d1p1:type="Neo.ApplicationFramework.Tools.OpcClient.PollGroup, ToolsCF, Version=2.0.463.0, Culture=neutral, PublicKeyToken=null" Interval="500" Name="PollGroup5" d1p1:Site.Name="PollGroup5" />
+    </PollGroups>
+    <Events>
+      <Event Name="ServerInfo" EventHandler="Tags_ServerInfo" />
+    </Events>
+  </Object>
+</NeoItem>

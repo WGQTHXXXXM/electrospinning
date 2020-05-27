@@ -1,0 +1,1496 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommonCF</name>
+    </assembly>
+    <members>
+        <member name="M:Neo.ApplicationFramework.Common.NotifyPropertyChangedCF.FirePropertyChanged(System.String)">
+            <summary>
+            Triggers the OnPropertyChanged event.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.BoolComparer.Compare(System.Boolean,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Compares the specified value.
+            </summary>
+            <param name="value">if set to <c>true</c> [value].</param>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Boundary.BoolComparer.Value">
+            <summary>
+            Gets the previous value.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.IComparer`1.Compare(`0,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Test if a comparison is true.
+            </summary>
+            <param name="value">The value on the left hand side of the comparison.</param>
+            <param name="type">The comparison type.</param>
+            <returns>True if conditions are met.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.ComparerBase`1.Compare(`0,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Test if a comparison is true.
+            </summary>
+            <param name="value">The value on the left hand side of the comparison.</param>
+            <param name="type">The comparison type.</param>
+            <returns>True if conditions are met.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.DecimalComparer.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DecimalComparer"/> class.
+            </summary>
+            <param name="value">The value to be used on the right hand side of the comparisons.</param>
+            <param name="deadband">A possible deadband in 'equal to' comparisons.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.DecimalComparer.Compare(System.Decimal,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Test if a comparison is true.
+            </summary>
+            <param name="value">The value on the left hand side of the comparison.</param>
+            <param name="type">The comparison type.</param>
+            <returns>True if conditions are met.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.DoubleComparer.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DoubleComparer"/> class.
+            </summary>
+            <param name="value">The value to be used on the right hand side of the comparisons.</param>
+            <param name="deadband">A possible deadband in 'equal to' comparisons.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.DoubleComparer.Compare(System.Double,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Test if a comparison is true.
+            </summary>
+            <param name="value">The value on the left hand side of the comparison.</param>
+            <param name="type">The comparison type.</param>
+            <returns>True if conditions are met.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.IntComparer.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IntComparer"/> class.
+            </summary>
+            <param name="value">The value to be used on the right hand side of the comparisons.</param>
+            <param name="deadband">A possible deadband in 'equal to' comparisons.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Boundary.IntComparer.Compare(System.Int32,Neo.ApplicationFramework.Interfaces.ComparerTypes)">
+            <summary>
+            Test if a comparison is true.
+            </summary>
+            <param name="value">The value on the left hand side of the comparison.</param>
+            <param name="type">The comparison type.</param>
+            <returns>True if conditions are met.</returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Brand.BrandToolResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.AutomaticUpdateProductName">
+            <summary>
+              Looks up a localized string similar to iXDeveloper2.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.BrandName">
+            <summary>
+              Looks up a localized string similar to iX.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.ByCompany">
+            <summary>
+              Looks up a localized string similar to by Beijer Electronics.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.Company">
+            <summary>
+              Looks up a localized string similar to Beijer Electronics AB.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.DefaultProjectFolderName">
+            <summary>
+              Looks up a localized string similar to iX Developer 2 Projects.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.DriverTargetInfoBrand">
+            <summary>
+              Looks up a localized string similar to Beijer.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.DriverTargetInfoHMIseries">
+            <summary>
+              Looks up a localized string similar to Exter iX.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.DriverTargetInfoProgram">
+            <summary>
+              Looks up a localized string similar to iXDeveloper.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.FileExtension">
+            <summary>
+              Looks up a localized string similar to .neo.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.HomePage">
+            <summary>
+              Looks up a localized string similar to http://www.beijerelectronics.com.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.InformationDesignerFileFilter">
+            <summary>
+              Looks up a localized string similar to Information Designer Files (*.cpa)|*.cpa|E-Designer Files (*.mpa)|*.mpa|ADP Files (*.a2i)|*.a2i.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.InformationDesignerProductName">
+            <summary>
+              Looks up a localized string similar to Information Designer.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.MsiUpgradeCode">
+            <summary>
+              Looks up a localized string similar to {A435F0AF-9BCF-44D4-BA95-42BE49D9C410}.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.PanelBrandID">
+            <summary>
+              Looks up a localized string similar to 8.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.Product">
+            <summary>
+              Looks up a localized string similar to iX Developer 2.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.ProductVersion">
+            <summary>
+              Looks up a localized string similar to 2.0 SP1.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.ProjectFileExtension">
+            <summary>
+              Looks up a localized string similar to .neoproj.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.RegistrationCodeSeed">
+            <summary>
+              Looks up a localized string similar to Beijer2.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.RegistrationUrl">
+            <summary>
+              Looks up a localized string similar to http://www.beijerelectronics.com/registration.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.ScreenFileExtension">
+            <summary>
+              Looks up a localized string similar to .neoxaml.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.SplashProgressBarBottom">
+            <summary>
+              Looks up a localized string similar to 28.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.SplashProgressBarLeft">
+            <summary>
+              Looks up a localized string similar to 30.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.SupportedDrivers">
+            <summary>
+              Looks up a localized string similar to 130.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Brand.BrandToolResource.UpdateDriverWWWAddress">
+            <summary>
+              Looks up a localized string similar to iXDeveloper/drivers.mpd.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Collections.FilteredList`1">
+            <summary>
+            Class to be used when working with a subset of a full list
+            The filter delegate is passed in the constructor
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.FilteredList`1.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Make sure a new PropertyDescriptorCollection is created and returned, we should not 
+            modify the cached PropertyDescriptorCollection returned by TypeDescriptor.GetProperties.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.LfuCache`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            
+            </summary>
+            <param name="size"></param>
+            <param name="agePolicy">after this number of gets the cache will take 1 off all UseCounts, forcing old stuff to expire.</param>
+            <param name="equalityComparer"></param>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Collections.NotifiableCollection`1">
+            <summary>
+            Listens for PropertyChanged among the children and propagates it when it happens.
+            </summary>
+            <typeparam name="T">Any type that implements INotifyPropertyChanged.</typeparam>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Collections.OwnedList`1">
+            <summary>
+            Class that implements a generic list that automatically adds and removes
+            components to the container that the Owner resides in. Use it to implement a 
+            designer collection property.
+            </summary>
+            <typeparam name="T">The type of items in the collection. Must implement IComponent.</typeparam>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.OwnedList`1.#ctor(System.ComponentModel.IComponent)">
+            <summary>
+            Initializes a new instance of the OwnedList class.
+            </summary>
+            <param name="owner">The owner.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.OwnedList`1.#ctor(System.ComponentModel.IComponent,System.Type)">
+            <summary>
+            Initializes a new instance of the OwnedList class.
+            Used if the typed elements are of interface type
+            </summary>
+            <param name="owner"></param>
+            <param name="typeToCreate"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.OwnedList`1.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item at the specified index.
+            Also removes the item from the owning container.
+            </summary>
+            <param name="index">The zero-based index of the item to remove.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.OwnedList`1.ClearItems">
+            <summary>
+            Removes all items.
+            Also removes the items from the owning container.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Collections.OwnedList`1.InsertItem(System.Int32,`0)">
+            <summary>
+            Inserts the specified item in the list at the specified index.
+            Also adds the item to the owning container.
+            </summary>
+            <param name="index">The zero-based index where the item is to be inserted.</param>
+            <param name="item">The item to insert in the list.</param>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Collections.OwnedList`1.Owner">
+            <summary>
+            The owner of the collection.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Collections.OwnedList`1.Container">
+            <summary>
+            Helper function that gets the container.
+            </summary>
+            <value>The container.</value>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Collections.WeakDictionary`2">
+            <summary>
+            A dictionary that holds a weakreference to the TValue object in the dictionary
+            and therefore doesn't prevent the object from being garbage collected.
+            NOTE! Not all methods are implemented!
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Constants.SymbolConstants.SupportedImageFileExtensions">
+            <summary>
+            Returns an array of supported image file extensions without any leading dot. For example : {bmp, jpg}
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Constants.SymbolConstants.SupportedImagePatterns">
+            <summary>
+            Returns an array of supported image file patterns for searching and filtering. For example : {*.bmp, *.jpg}
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Data.NotifyPropertyChangedHelperBase.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the NotifyPropertyChangedHelper class.
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Data.DataItemProxy.ConnectedClients">
+            <summary>
+            Handles the triggering of valuechanged based on the number of
+            connected "clients".
+            If not any connected clients, then don't fire ValueChanged.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Data.DataItemProxyFactory.CreateProxy(System.String)">
+            <summary>
+            Used for creating proxies from generated code, see Neo.ApplicationFramework.Tools.OpcClient.DataItemProxyConverter./>
+            </summary>
+            <param name="name">Name of data item to create a proxy for.</param>
+            <returns>The created proxy, or null if not possible.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Data.DataItemProxyFactory.CreateRealtimeProxy(System.String)">
+            <summary>
+            Used for creating proxies from generated code, see Neo.ApplicationFramework.Tools.OpcClient.DataItemProxyConverter./>
+            </summary>
+            <param name="name">Name of data item to create a proxy for.</param>
+            <returns>The created proxy, or null if not possible.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Data.DataItemProxyFactory.GetProxy(System.String,Neo.ApplicationFramework.Interfaces.IScreen)">
+            <summary>
+            The purpose with this overloaded method is that it can be called from script, in order 
+            to get a proxy that ends up in the recorded proxy list, even after EndRecordProxies have 
+            been called, and thereby gets refreshed by the update timer in screen. The tag also gets 
+            activated and later on deactivated when closing the screen, but it's not batch activated.
+            </summary>
+            <param name="name">Full name of tag to get proxy for.</param>
+            <param name="screen">Reference to the screen to record this proxy for.</param>
+            <returns>A dataitem proxy for the tag.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.OnListChanged(System.Object,System.ComponentModel.ListChangedEventArgs)">
+            <summary>
+            Method to handle BindingList.ListChanged events from deriving classes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.Equals(System.Object)">
+            <summary>
+            Comparison must be performed this way to make Proxied object appear the same
+            as the Transparent Proxy object.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.GetHashCode">
+            <summary>
+            Must be overridden when overriding Equals() method.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.DesignerItemBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.BindableDesignerItemBase.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Designer.BindableDesignerItemBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.BindableDesignerItemBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.ValueConnectionDesignerItemBase.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Designer.ValueConnectionDesignerItemBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Designer.ValueConnectionDesignerItemBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.Interval`1.UnhookPropertyChangedEvent">
+            <summary>
+            If the m_Value class T implements INotifyPropertyChanged, hook the PropertyChanged
+            event handler.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.Interval`1.HookPropertyChangedEvent">
+            <summary>
+            If the m_Value class T implements INotifyPropertyChanged, unhook the PropertyChanged
+            event handler.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.BrushDynamicsConverterCF.#ctor">
+            <summary>
+            Initializes a new instance of the BrushConverterCF class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.BrushDynamicsConverterCF.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value. The data binding engine calls this method when it propagates
+            a value from the binding source to the binding target.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">he converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.SymbolIntervalList.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
+            <summary>
+            Make sure a new PropertyDescriptorCollection is created and returned, we should not 
+            modify the cached PropertyDescriptorCollection returned by TypeDescriptor.GetProperties.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Extensions.EventExtensions.Fire``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Fire / Raise event in a thread safe manner
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="myEvent"></param>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Extensions.EventExtensions.FireWithBreaks(System.EventHandler,System.Object,System.EventArgs,System.Int32,System.Action)">
+            <summary>
+            Iterates over the delegates in the multicast event, and invokes them sequentially. After every <paramref name="breakAfterCount"/> the <paramref name="breakOperation"/> is invoked.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Extensions.ICloneableExtensions.DeepClone(System.ICloneable)">
+            <summary>
+            Is a complement to the MemberwiseClone() method, where this will clone all reference types, held onto by fields, if they implement the ICloneable interface.
+            </summary>
+            <param name="shallowClone"></param>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.FileLogic.FilePathLogicCF">
+            <summary>
+            Help class to set up correct file paths for generated files (database exports, screen dumps)
+            on the execution environment Windows CE.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.#ctor">
+            <summary>
+            Initializes a new instance of the RegionBuilder class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.ApplyRegion(System.IntPtr,System.IntPtr,System.Boolean)">
+            <summary>
+            Applies a region to a window.
+            </summary>
+            <param name="windowHandle">The window handle which is the target of the region.</param>
+            <param name="region">The region to be applied.</param>
+            <param name="redraw">If the apply region should force a redraw immediately after the region has been applied.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.ApplyRegionFast(System.IntPtr,System.Drawing.Bitmap,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Applies a region to a window from the shape of a bitmap.
+            This method uses a faster algorithm, which does not support advanced shapes, e.g transparent colors in the middle of the bitmap.
+            </summary>
+            <param name="windowHandle">The window handle which is the target of the region.</param>
+            <param name="bitmap">The bitmap to build the region from.</param>
+            <param name="transparent">The color key of the transparent color.</param>
+            <param name="redraw">If the apply region should force a redraw immediately after the region has been applied.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.ApplyRegion(System.IntPtr,System.Drawing.Bitmap,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Applies a region to a window from the shape of a bitmap.
+            </summary>
+            <param name="windowHandle">The window handle which is the target of the region.</param>
+            <param name="bitmap">The bitmap to build the region from.</param>
+            <param name="transparent">The color key of the transparent color.</param>
+            <param name="redraw">If the apply region should force a redraw immediately after the region has been applied.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.ApplyRegion(System.IntPtr,System.Collections.Generic.List{System.Drawing.Rectangle},System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Applies a region to a window from the information of the rectangles. The rectangles is the areas which will be removed from the main rectangle
+            </summary>
+            <param name="windowHandle">The window handle which is the target of the region.</param>
+            <param name="rectangles">List of rectangles which represents the transparent area of the window</param>
+            <param name="mainRectangle">The main rectangle which the transparent rectangles will be removed from when building the region</param>
+            <param name="redraw">If the apply region should force a redraw immediately after the region has been applied.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.BuildRegionFromBitmap(System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            Creates a region from a bitmap.
+            </summary>
+            <param name="bitmap">The bitmap to use as a shape for the region</param>
+            <param name="transparent">Color key for the transparent areas</param>
+            <returns>The new region</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.BitmapRegionBuilder.BuildRegionFromBasicBitmap(System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            Creates a region from a bitmap. Does not work on advanced shapes but are a lot faster.
+            </summary>
+            <param name="bitmap">Bitmap to build region from</param>
+            <param name="transparent">Color key of transparent color</param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.NineSliceBitmap.#ctor(System.Drawing.Bitmap)">
+            <summary>
+            Initializes a new instance of the NineSliceBitmap class.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Graphics.NineSliceBitmap.AllMargins">
+            <summary>
+            Single margin on all four sides.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Graphics.RegionManager.m_RegionMatrix">
+             Rounded corner matrix
+             -------
+             -----++
+             ---++++
+             --+++++
+             -++++++
+             -++++++
+             -++++++
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.RegionManager.#ctor">
+            <summary>
+            Initializes a new instance of the RegionManager class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Graphics.RegionManager.CreateShadowDrawingRegion">
+            <summary>
+            Creates a shadow region, it's up to the caller to delete the object.
+            </summary>
+            <returns>Handle to region.</returns>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.DelayInput.DelayInputView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.DelayInput.DelayInputView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.DelayInput.DelayInputView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Keyboard.SendKeysCF">
+            <summary>
+            This class is partly borrowed from OpenNETCF and modified to make it work properly.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Data.DynamicBinding.ReadValue">
+            <summary>
+            Push data from source to destination
+            Calling ReadValue on bindings not added in DCBC via base.AddCore will have some properties set to null, hence ReadValue will throw exception.
+            This method will make the distinction and bypass ReadValue for bindings supporting optimized binding (i.e. pushing the data directly) 
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Dynamics.DynamicString.#ctor">
+            <summary>
+            Should only be used in runtime
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Dynamics.StringIntervalList">
+            <summary>
+            Inherit generic type, since XamlWriter cannot serialize generics.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.MessageFilter.BeepMessageFilterCF.PreFilterMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            Filters windows' messages, before being sent forth to potential event handlers.
+            </summary>
+            <param name="message">The incoming message.</param>
+            <param name="lParam"></param>
+            <param name="handle">The handle for the target window.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.MessageFilter.MessageFilterCF.#ctor">
+            <summary>
+            Initializes a new instance of the MessageFilterCF class.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.MessageLibrary.MessageItem.DisplayName">
+            <summary>
+            Gets or sets the display name. In the property grid it will show as "Name".
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.MessageLibrary.MessageItem.GroupName">
+            <summary>
+            Gets or sets the name of the group.
+            </summary>
+            <value>The name of the group.</value>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.MessageLibrary.MessageLibrary.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.MessageLibrary.MessageLibrary.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.MessageLibrary.MessageLibrary.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.MultiLanguage.MultiLanguageSystemTextResourceManager.#ctor">
+            <summary>
+            Initializes a new instance of the MultiLanguageSystemTextResourceManager class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.NotifyPropertyChangedHelperCF.SetAndFirePropertyChanged``1(System.String,``0@,``0,System.ComponentModel.PropertyChangedEventHandler)">
+            <summary>
+            Unhooks the eventhandler from the old value's PropertyChanged event, assigns the new value to it
+            , hooks up the PropertyChanged event on the new value, and finally fires the PropertyChanged event.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="propertyName"></param>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+            <param name="valueChangedEventHandler">Eventhandler to hook up to the Value's PropertyChanged event.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.NotifyPropertyChangedHelperCF.FirePropertyChanged(System.String)">
+            <summary>
+            Triggers the OnPropertyChanged event.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Printer.Document.TableCell.ColSpan">
+            <summary>
+            Number of cells this cell spans over.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Printer.Document.TableCell.ClipToBoundsX">
+            <summary>
+            Determines if the cell content may 'escape' the bounds of the cell.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Printer.Document.TableColumn.SizeToAvailable">
+            <summary>
+            SizeToAvailable is a special value indicating that the table column should use
+            all available space. If more than one column is set to SizeToAvailable the the 
+            available space will be equally distributed among these columns.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Printer.Document.TableRow.AutoHeight">
+            <summary>
+            AutoHeight will tell the TableRow to use as much space vertically as is
+            needed by the table rows content.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.BitmapPrintImageToGdiConverter">
+            <summary>
+            Converts a bitmap image into a device context that
+            can be used with native Gdi methods.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.BlockCollectionLayout">
+            <summary>
+            BlockCollectionLayout performs layout of all child layout elements. Layout elements
+            are always stacked on top of each other much like how a StackPanel works in WPF when
+            it has its Orientation set to vertical.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.BlockLayoutElement">
+            <summary>
+            BlockLayoutElement is a base for layout elements that wish to provide padding
+            to the contained content.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.DeviceDependentThickness">
+            <summary>
+            Represents a thickness on the four sides of a rectangle. In contrast to the Thickness class
+            these values are calculated based on the resolution of the device and units are in pixels.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.BlockLayoutFactory">
+            <summary>
+            Factory for converting a FlowDocument Block into the corresponding layout element.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.FlowDocumentLayout">
+            <summary>
+            FlowDocumentLayout performs layout of FlowDocument. The layout is adapted to the 
+            available space which is dependent on the (printer)device is used. FlowDocumentLayout
+            will construct a tree of sub-layout elements all in charge of performing layout
+            on a subset of the original flow document.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.ImageLayout">
+            <summary>
+            Performs layout of a FlowDocument PrintImage. 
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.InlineCollectionLayout">
+            <summary>
+            Performs layout of a list of inlines (e.g. texts/spans). Unlike blocks inlines continue on the same row until the
+            end is reached. Dependening on the TextWrapping the inlines may continue on the next row (TextWrapping.Wrap) or
+            the inline may be chopped (TextWrapping.NoWrap). 
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.InlineLayout">
+            <summary>
+            Performs layout on a FlowDocument Inline. Currently this class is hardcoded to 
+            layout Spans (which is a inline element).  
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.NullPrintImageToGdiConverter">
+            <summary>
+            A null converter to convert a GdiImage (i.e. a device context) to DeviceContext.
+            Since GdiImage already provide a device context no conversion is needed, hence
+            the null prefix.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.ParagraphLayout">
+            <summary>
+            Performs layout of a FlowDocument Paragraph. A paragraph consists
+            of a number of inline elements, typically spans.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Printer.GdiPrinter.TableLayout">
+            <summary>
+            Performs layout of a FlowDocument Table. TableLayout arranges the content in
+            a grid.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.SetWinFormsThreadExceptionMode">
+            <summary>
+            By setting SetUnhandledExceptionMode on full framework to ThrowException (1) it behaves the same on both real Compact Framework and on full Framework.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.GetObject``1(System.Type)">
+            <summary>
+            Returns an existing instance of instanceType or creates a new instance of it.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.GetObjects``1">
+            <summary>
+            Finds all objects of specified type or inherited from that type.
+            </summary>
+            <typeparam name="T">Type of objects to search for.</typeparam>
+            <returns>All objects of the specified type or inherited from the type.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.GetInstances``1">
+            <summary>
+            Finds all objects of specified type (or those assignable from) that were designer-generated.
+            (e.g. AlarmServer, SecurityManager)
+            </summary>
+            <returns>Iterator over found instances of matching type.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.GetControlFromHandle(System.IntPtr,System.Windows.Forms.Control@,System.Windows.Forms.Control@)">
+            <summary>
+            Searches for a control with the specifed handle, among all forms.
+            </summary>
+            <param name="handle">The control handle to search for.</param>
+            <param name="targetControl">The control with the specifed handle, or null if not found.</param>
+            <param name="targetRoot">The topmost parent control.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.FindControl(System.IntPtr,System.Windows.Forms.Control.ControlCollection)">
+            <summary>
+            Recursive search function among all controls.
+            </summary>
+            <param name="hwnd">The control handle to search for.</param>
+            <param name="controls">The controls collection to search in.</param>
+            <returns>The control with the specifed handle, or null if not found.</returns>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.Neo#ApplicationFramework#Interfaces#ISettings#ProjectSettings">
+            <summary>
+            Implemented explicitly in order to not collide with a designer having the same name.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Runtime.GlobalsBase.Neo#ApplicationFramework#Interfaces#ISettings#SystemSettings">
+            <summary>
+            Implemented explicitly in order to not collide with a designer having the same name.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF">
+            <summary>
+            The security extender holding certain security related properties, in runtime.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.m_SecurityGroups">
+            <summary>
+            Hashtable with controls and their security groups.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.m_VisibilityModes">
+            <summary>
+            Hashtable with controls and their visibility modes.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityExtenderCF"/> class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.GetSecurityGroupsForControl(System.ComponentModel.IComponent)">
+            <summary>
+            Gets the security groups enumeration for a component.
+            </summary>
+            <param name="component">The component to retrieve security groups for.</param>
+            <returns>A security groups enumeration.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.SetSecurityGroupsRequired(System.ComponentModel.IComponent,Neo.ApplicationFramework.Interfaces.SecurityGroups)">
+            <summary>
+            Sets the security groups for a component.
+            </summary>
+            <param name="component">The component to set security groups for.</param>
+            <param name="value">A security groups enumeration.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.GetVisibilityModeForControl(System.ComponentModel.IComponent)">
+            <summary>
+            Gets the visibility mode for a component.
+            </summary>
+            <param name="component">The component to retrieve the visibility mode for.</param>
+            <returns>A visibility mode enumeration.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.SetVisibilityOnAccessDenied(System.ComponentModel.IComponent,Neo.ApplicationFramework.Interfaces.VisibilityModes)">
+            <summary>
+            Sets the visibility mode for a component.
+            </summary>
+            <param name="component">The component to set the visibility mode for.</param>
+            <param name="value">A visibility mode enumeration.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.RegisterSecurityExtender(System.Windows.Forms.Control,Neo.ApplicationFramework.Interfaces.ISecurityExtenderCF)">
+            <summary>
+            Adds the security extender to the security manager's collection of extenders.
+            </summary>
+            <param name="control">The parent control of the extender.</param>
+            <param name="securityExtender">The security extender to add.</param>
+            <returns>True if successfully added, false otherwise.</returns>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Security.SecurityExtenderCF.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityGroupHelper.FlagGroup(Neo.ApplicationFramework.Interfaces.SecurityGroups,Neo.ApplicationFramework.Interfaces.SecurityGroups)">
+            <summary>
+            Flags a security group, by using bitwise 'or' on the enumeration and the group.
+            </summary>
+            <param name="groups">Security groups enumeration to manipulate.</param>
+            <param name="groupToFlag">Group to flag in enumeration.</param>
+            <returns>A security groups enumeration with the specified group flagged.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityGroupHelper.UnflagGroup(Neo.ApplicationFramework.Interfaces.SecurityGroups,Neo.ApplicationFramework.Interfaces.SecurityGroups)">
+            <summary>
+            Unflags a security group, by using bitwise 'and' on the enumeration and the inverted group.
+            </summary>
+            <param name="groups">Security groups enumeration to manipulate.</param>
+            <param name="groupToUnflag">Group to unflag in enumeration.</param>
+            <returns>A security groups enumeration with the specified group unflagged.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityGroupHelper.IsAnyGroupFlagged(Neo.ApplicationFramework.Interfaces.SecurityGroups,Neo.ApplicationFramework.Interfaces.SecurityGroups)">
+            <summary>
+            Checks if any group is flagged in another security groups enumeration.
+            </summary>
+            <param name="groups">Security groups enumeration to check among.</param>
+            <param name="groupsToCheck">Groups to check if flagged.</param>
+            <returns>True if any of the groups is flagged, false otherwise.</returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Security.SecurityMessageFilterCF">
+            <summary>
+            Security message filter for compact framework, e.g. Windows CE.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Security.SecurityMessageFilterCF.PreFilterMessage(System.Int32,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            Filters windows' messages, before being sent forth to potential event handlers.
+            </summary>
+            <param name="message">The incoming message.</param>
+            <param name="key">The key that was pressed.</param>
+            <param name="handle">The handle for the target window.</param>
+            <param name="param">The handle for the incoming parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Serialization.ObjectSerializerCF.ReadObject(System.Xml.XmlNode,System.Object)">
+            Reads the "Object" tag. This returns an instance of the
+            newly created object. Returns null if there was an error.
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Service.ServiceContainerCF.GetServiceSafe``1">
+            <summary>
+            Doesn't throw an exception
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Service.ServiceContainerCF.GetService``1">
+            <summary>
+            Gets a specific service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <exception cref="T:Neo.ApplicationFramework.Common.Exceptions.ServiceNotAvailableException"></exception>
+            <returns>Found service</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Service.ServiceContainerCF.IsServicePresent(System.Type)">
+            <summary>
+            Functionality added to default implementation of servicecontainer.
+            This method should maybe check the parent container as well?
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Service.ServiceContainerCF.IsServiceMissing(System.Type)">
+            <summary>
+            Functionality added to default implementation of servicecontainer.
+            This method should maybe check the parent container as well?
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.RegisterServiceLazy``1(System.Func{``0})">
+            <summary>
+            Register a service without supplying a created instance. Instead you supply a delegate
+            that will be called the first time it is requested, in order to create the concrete
+            service instance.
+            </summary>
+            <typeparam name="T">
+            The service interface to be registered with the ServiceContainer. This is what
+            consumers of the service will supply to the GetService call on the ServiceContainer.
+            </typeparam>
+            <param name="serviceCreationCallback">
+            A delegate that will be called the first time the service is requested. It is expected
+            to return a concrete instance of the service.
+            </param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.GetServiceSafe``1">
+            <summary>
+            Doesn't throw an exception
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.RegisterServices">
+            <summary>
+            All services provided by the tool should be registered here.
+            Register services is called first for every tool, before any of them are being initialized.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.Init">
+            <summary>
+            Initializes the tool, all services should now have been registered, but the message pump is not up.
+            It's now possible to connect to other services, since they should all have been registered.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.Run">
+            <summary>
+            Runs the tool, i.e. called as a consequence of Application.Idle being fired, the message pump is now up.
+            It's guaranteed that every tool has been initialized before run is called.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.Stop">
+            <summary>
+            Stops the tool.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.ToolBase.IsInitialized">
+            <summary>
+            Determines whether this instance is initialized or not.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGBtoHSL(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Converts RGB to HSL.
+            </summary>
+            <param name="red">Red value, must be in [0,255].</param>
+            <param name="green">Green value, must be in [0,255].</param>
+            <param name="blue">Blue value, must be in [0,255].</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.HSLtoRGB(System.Double,System.Double,System.Double)">
+            <summary>
+            Converts HSL to RGB.
+            </summary>
+            <param name="h">Hue, must be in [0, 360].</param>
+            <param name="s">Saturation, must be in [0, 1].</param>
+            <param name="l">Luminance, must be in [0, 1].</param>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGB">
+            <summary>
+            RGB structure.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGB.Empty">
+            <summary>
+            Gets an empty RGB structure;
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGB.Red">
+            <summary>
+            Gets or sets red value.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGB.Green">
+            <summary>
+            Gets or sets red value.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.ColorSpaceConverter.RGB.Blue">
+            <summary>
+            Gets or sets red value.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.TypeConverters.HSL">
+            <summary>
+            Structure to define HSL.
+            </summary>
+        </member>
+        <member name="F:Neo.ApplicationFramework.Common.TypeConverters.HSL.Empty">
+            <summary>
+            Gets an empty HSL structure;
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.TypeConverters.HSL.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Creates an instance of a HSL structure.
+            </summary>
+            <param name="h">Hue value.</param>
+            <param name="s">Saturation value.</param>
+            <param name="l">Lightness value.</param>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.HSL.Hue">
+            <summary>
+            Gets or sets the hue component.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.HSL.Saturation">
+            <summary>
+            Gets or sets saturation component.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.TypeConverters.HSL.Luminance">
+            <summary>
+            Gets or sets the luminance component.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.ApplicationCE.ThreadWindows.Enable(System.Boolean)">
+            <summary>
+            Enables/Disables thread windows except parent window.
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.FileHelperCF.WriteStreamToTemp(System.IO.Stream,System.String)">
+            <summary>
+            Writes the stream to the system temp directory and returns the new filename.
+            </summary>
+            <param name="stream">Stream to write</param>
+            <param name="fileName">Filename to extract extension from. Can be null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.InvokerControl.#ctor">
+            <summary>
+            Initializes a new instance of the InvokerControl class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.LocalizationHelperCF.GetFunctionDisplayNameFromType(System.Type)">
+            <summary>
+            Gets the FunctionDisplayName from type of a DesignerItem.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.LocalizationHelperCF.GetDesignerGroupFromType(System.Type)">
+            <summary>
+            Gets the DesignerGroup from type of a DesignerItem.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.NeoApplication">
+            <summary>
+            This class is a CF wrapper for the .NET Application class.
+            It executes methods in different assemblies, depending on 
+            the execution environment.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.NeoApplication.Initialize">
+            <summary>
+            This method must be invoked on the main thread since the InvokerControl must be created on 
+            the window thread.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.NeoApplication.Run(System.Object)">
+            <summary>
+            Begins running a standard application message loop on 
+            the current thread, and makes the specified form visible.
+            </summary>
+            <param name="screen">A screen to make visible.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.NeoApplication.AddMessageFilter(OpenNETCF.Windows.Forms.IMessageFilter)">
+            <summary>
+            Adds a message filter to monitor Windows messages 
+            as they are routed to their destinations.
+            </summary>
+            <param name="messageFilter">The implementation of the IMessageFilter interface you want to install.</param>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.NeoApplication.StartupPath">
+            <summary>
+            Gets the path for the executable file that started 
+            the application, not including the executable name. 
+            </summary>
+            <returns>The startup path for the application.</returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.NonReentrantActionExecutor">
+            <summary>
+            This class is usefull in conjunction with timers. 
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.NonReentrantActionExecutor.Invoke">
+            <summary>
+            If several threads are invoking this method, only one will execute the action provided in the constructor.
+            </summary>
+            <returns>true if the action is executed, false if not</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.NotificationLogic.UpdateNotificationMessage(System.String,System.Int32)">
+            <summary>
+            This function will show the notification message for at least timeoutInSeconds. 
+            If HideNotification is called after the time has elapsed this will be the actual 
+            time the message is shown. 
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.Send(System.String)">
+            <summary>
+            Send message through UDP.
+            </summary>
+            <param name="message">The message to send</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.CompactHeaps">
+            <summary>
+            Tries to compact all heaps an free memory.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.UDPRecieve">
+            <summary>
+            True if ProcessExplorer should monitor the UPDRecievePortNumber
+            for incoming commands.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.UDPRecievePortNumber">
+            <summary>
+            The UPD port number to monitor for incoming commands.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.RemoteEndPoint">
+            <summary>
+            The UPD address to use.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.TCPAddress">
+            <summary>
+            TCP address. Not used.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.TCPPortNumber">
+            <summary>
+            TCP portnumber. Not used.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.Silent">
+            <summary>
+            If true, nothing will be sent.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.WaitForAttachDebugger">
+            <summary>
+            If true, makes Neo wait in Main, so a debugger can be attached 
+            to a process. Setting it to false will make Neo continue excecuting.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.BoolDebug1">
+            <summary>
+            Boolean debug variable.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.BoolDebug2">
+            <summary>
+            Boolean debug variable.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.BoolDebug3">
+            <summary>
+            Boolean debug variable.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.ProcessList">
+            <summary>
+            List of all running processes.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessExplorer.SystemInfo">
+            <summary>
+            GlobalMemoryStatus.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.ProcessID">
+            <summary>
+            Identifier of the process. 
+            The contents of this member can be used by Win32 API elements.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.Usage">
+            <summary>
+            Number of references to the process. Must be 1.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.ProcessExe">
+            <summary>
+            The path and file name of the executable file for the process.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.DefaultHeapID">
+            <summary>
+            Identifier of the default heap for the process. 
+            The contents of this member has meaning only to the tool help functions. 
+            It is not a handle, nor is it usable by Win32 API elements.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.ModuleID">
+            <summary>
+            Module identifier of the process. Must be 0.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.ThreadCount">
+            <summary>
+            Number of execution threads started by the process.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.ParentProcessID">
+            <summary>
+            Identifier of the process that created the process being examined. 
+            Must be 0.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.PriClassBase">
+            <summary>
+            Base priority of any threads created by this process. 
+            Value is always THREAD_PRIORITY_NORMAL
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.Flags">
+            <summary>
+            Reserved; do not use.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.WindowText">
+            <summary>
+            The text of the owner window, if any.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.Threads">
+            <summary>
+            List of execution threads started by the process.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.Modules">
+            <summary>
+            List of modules that the process is owner of.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.Heaps">
+            <summary>
+            A list of heaps the process owns
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.ProcessInfo.MemoryUsage">
+            <summary>
+            The MemoryUsage of the process.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.ValidateException">
+            <summary>
+            Exception thrown when values and conditions specified by <see cref="T:Neo.ApplicationFramework.Common.Utilities.Validate"/> is not met.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.ValidateException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Neo.ApplicationFramework.Common.Utilities.ValidateException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference if no inner
+            exception is specified.
+            </param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Stopwatch.StartClock(System.String)">
+            <summary>
+            This method starts a clock with a given name. Every call to StartClock/StopClock accumulates the time taken which can later be displayed by SummarizeClock().
+            </summary>
+            <param name="clockName"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Stopwatch.StopClock(System.String,System.Boolean)">
+            <summary>
+            Stops this clock and displays the time taken since last StartClock.
+            </summary>
+            <param name="clockName"></param>
+            <param name="quiet">False will not display the time taken for this clock.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Stopwatch.SummarizeClock(System.String)">
+            <summary>
+            This method has no effect on the clock. It just displays the time accumulated by one or several calls to StartClock/StopClock.
+            </summary>
+            <param name="clockName"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Stopwatch.SummarizeClock(System.String,System.Boolean)">
+            <summary>
+            This method displays the time accumulated by one or several calls to StartClock/StopClock and resets the time.
+            </summary>
+            <param name="clockName"></param>
+            <param name="reset"></param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Stopwatch.ResetClock(System.String)">
+            <summary>
+            Resets a given clock.
+            </summary>
+            <param name="clockName"></param>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.Stopwatch.Silent">
+            <summary>
+            Makes the clock run in silent mode.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.StopWatchCF.ElapsedMicroSeconds">
+            <summary>
+            Returns the number of elapsed micro seconds, by looking at the OSCR0 register.
+            </summary>
+        </member>
+        <member name="P:Neo.ApplicationFramework.Common.Utilities.StopWatchCF.ShowProjectStartupTime">
+            <summary>
+            This is the time between the projects Main, to the first paint of the main window.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.SystemInfo.#ctor">
+            <summary>
+            Initializes a new instance of the SystemInfo class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Threading.Task.Execute">
+            <summary>
+            Do not call this method directly. It should be called by the task scheduler.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.Threading.TaskBuilder">
+            <summary>
+            Helper class to create "fake" tasks using the TaskCompletionSource. Fake tasks
+            is useful in tests when you want to mock results but also to connect convert 
+            asyncrounous operations that are event based to tasks.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.Threading.TaskCompletionSource">
+            <summary>
+            TaskCompletionSource gives you the ability of controlling a Task, ie, set
+            the outcome manually. 
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.Threading.TaskExtensions">
+            <summary>
+            Extension methods on Task
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Threading.TaskExtensions.Unwrap(Neo.ApplicationFramework.Interfaces.ITask{Neo.ApplicationFramework.Interfaces.ITask})">
+            <summary>
+            Creates a proxy Task that represents the asynchronous operation of a Task of task.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Threading.ThreadPoolTaskScheduler.StartNextTaskInQueue">
+            <summary>
+            Must be called while holding m_QueueSync lock.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Toolhelp32.ProcessEntry32.#ctor">
+            <summary>
+            Initializes a new instance of the PROCESSENTRY32 class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Toolhelp32.ModuleEntry32.#ctor">
+            <summary>
+            Initializes a new instance of the ModuleEntry32 class.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Common.Utilities.Validate">
+            <summary>
+            Class used when validating arguments in methods and constructs. Removes a lot of the
+            boilerplate code a developer otherwise have to write.
+            </summary>
+            <example>
+            The following code sample displays usage. Code a developer normally has to write has been
+            outcommented.
+            </example>
+            <code>
+            public void SomeMethod(ISomeInterface someInterface, int someInt)
+            {
+              //if (someInterface == null)
+              //  throw new ArgumentNullException("someInterface");
+              //if (someInt &lt; 0)
+              //  throw new ArgumentException("someInt must be positive");
+               
+              Validate.IsNotNull(someInterface);
+              Validate.IsTrue(someInt &gt;= 0, "someInt must be positive");
+            
+              // Placeholder for method code
+            }
+            </code>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Validate.IsNotNull``1(``0,System.String)">
+            <summary>
+            Validate that specified value isn't null.
+            </summary>
+            <param name="value">The value to check for not null.</param>
+            <param name="message">The error message.</param>
+            <exception cref="T:Neo.ApplicationFramework.Common.Utilities.ValidateException">value is null.</exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Validate.IsTrue(System.Boolean,System.String)">
+            <summary>
+            Validate that specified condition is true.
+            </summary>
+            <param name="condition">The condition to check for true.</param>
+            <param name="message">The error message.</param>
+            <exception cref="T:Neo.ApplicationFramework.Common.Utilities.ValidateException">condition is false.</exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Validate.IsNotNullOrEmpty(System.String,System.String)">
+            <summary>
+            Validate that specified value isn't null or an empty string.
+            </summary>
+            <param name="value">The value to check for not null or an empty string.</param>
+            <param name="message">The error message.</param>
+            <exception cref="T:Neo.ApplicationFramework.Common.Utilities.ValidateException">value is null or an empty string.</exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Validate.CastNotNull``1(System.Object,System.String)">
+            <summary>
+            Validate that specified value can be cast to specified type.
+            </summary>
+            <typeparam name="T">The type to cast specified value to.</typeparam>
+            <param name="value">The value to cast.</param>
+            <param name="message">The error message.</param>
+            <returns>The specified value to specified type.</returns>
+            <exception cref="T:System.NullReferenceException">value is null.</exception>
+            <exception cref="T:System.InvalidCastException">value is not of type T.</exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Common.Utilities.Validate.Throw(System.String)">
+            <summary>
+            Throws an <see cref="T:Neo.ApplicationFramework.Common.Utilities.ValidateException"/> with specified error message.
+            </summary>
+            <param name="errorMessage">The error message.</param>
+        </member>
+    </members>
+</doc>

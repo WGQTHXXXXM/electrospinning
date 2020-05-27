@@ -1,0 +1,329 @@
+#A
+WT18000
+SHABCDEF
+#HOMEB
+JP#HOMEB,NoZero=0   当六轴回零按下时，才会往下进行
+JG-20000,-20000,-20000,-20000,-20000,-20000   六轴回零。
+HMABCDEF
+BGABCDEF
+AMABCDEF
+#LOOP1
+JP#C,((((Belt=1)|(nhBelt=1))&(FeedPump=1))&(NePre=1))&(Exhaust=1)   只有要求的几个条件都满足时才会六轴运动。否则不会往下进行
+JP#LOOP1
+#C
+JP#C,Start=0   按下启动按键时六轴开始动。
+DP0,0,0,0,0,0,0,0      先定下零点
+DPART1=(L12+L13+L14)*409      一三五轴的L2,L3,L4的距离
+DPART2=(L22+L23+L24)*409      二四六轴的L2,L3,L4的距离 
+DALL=(L11+L12+L13+L14)*409    一三五轴的总长度
+DALL2=(L21+L22+L23+L24)*409   二四六轴的总长度
+从启动到进入周期有五种速度还有一个V21,V21是二四六轴的最终速度。在周期选择不同时，六个轴之间的配合的速度是不一样的。
+但它们遵循时间是一定的.根据这几个公式T=2S/V(加速度)和T=S/V（均速度），因为一三五去的时间等于二四六轴回来的时间。
+以下是算出来的速度。
+V1B=(((2*L14)+L13+(2*L12))*V21/((2*L21)+(2*L22)+(2*L24)+L23))     
+V1G=(((2*L14)+L13+(2*L12))*V21/((2*L24)+L23+(2*L22)))
+V3G=(((2*L11)+(2*L12)+L13+(2*L14))*V21/((2*L24)+L23+(2*L22)))
+V4G=(((2*L21)+(2*L22)+L23+(2*L24))*V21/((2*L24)+(2*L22)+L23))
+这些是每段速度的加速度，求加速度根据公式S=V^2/2a，知道每一段的加速度的距离和速度就可以求出a了。用到哪个速度时就要用
+它们相应的加速度。
+lac1b=@INT[(V1B*V1B/(((L11)+(L12))*2))]*409
+sac1b=@INT[(V1B*V1B/(L12*2))]*409
+lac1g=@INT[(V1G*V1G/(((L11)+(L12))*2))]*409
+sac1g=@INT[(V1G*V1G/(L12*2))]*409
+lac1=@INT[(V3G*V3G/(((L11)+(L12))*2))]*409
+sac1=@INT[(V3G*V3G/(L12*2))]*409
+lac2=@INT[(V21*V21/(((L21)+(L22))*2))]*409
+sac2=@INT[(V21*V21/(L22*2))]*409
+lac4=@INT[(V4G*V4G/(((L21)+(L22))*2))]*409
+sac4=@INT[(V4G*V4G/(L22*2))]*409
+AClac1        加速度
+DCsac1       减速度
+SPV3G*409        速度，*409是因为算成脉冲数了。
+a1=DALL*tnoo1        a1是刚开始走的总共的距离。tnoo1是选不选择这个轴，它的值是1或0.
+PRa1
+BGA
+ad1=L11*409*tnoo1            
+ADad1                      走完L1之后
+IF(statn1=1)                是否把喷头转90度。
+SB2
+ENDIF
+IF(statn1=0)
+CB2
+ENDIF
+AMA                                   A轴动作完
+ACsac1g,lac4                      加速度
+DCsac1g,sac4                        减速度
+SPV1G*409,V4G*409          速度
+a2=-DPART1*tnoo1           L2+L3+L4的距离
+b2=DALL2*tnoo2              总距离
+PRa2,b2
+BGAB
+AMAB
+ACsac1g,sac2,lac1             以下同理，一三五的一样，二四六的一样。
+DCsac1g,sac2,sac1
+SPV1G*409,V21*409,V3G*409
+a3=DPART1*tnoo1
+b3=-DPART2*tnoo2
+c3=DALL*tnoo3
+PRa3,b3,c3
+BGABC
+ad3=L11*409*tnoo3
+AD,,ad3
+IF(statn3=1)
+SB3
+ENDIF
+IF(statn3=0)
+CB3
+ENDIF
+AMABC
+ACsac1g,sac2,sac1g,lac4
+DCsac1g,sac2,sac1g,sac4
+SPV1G*409,V21*409,V1G*409,V4G*409
+a4=-DPART1*tnoo1
+b4=DPART2*tnoo2
+c4=-DPART1*tnoo3
+d4=DALL2*tnoo4
+PRa4,b4,c4,d4
+BGABCD
+AMABCD
+ACsac1g,sac2,sac1g,sac2,lac1
+DCsac1g,sac2,sac1g,sac2,sac1
+SPV1G*409,V21*409,V1G*409,V21*409,V3G*409
+a5=DPART1*tnoo1
+b5=-DPART2*tnoo2
+c5=DPART1*tnoo3
+d5=-DPART2*tnoo4
+e5=DALL*tnoo5
+PRa5,b5,c5,d5,e5
+BGABCDE
+AD,,,,L11*409*tnoo5
+IF(statn5=1)
+SB4
+ENDIF
+IF(statn5=0)
+CB4
+ENDIF
+AMABCDE
+ACsac1g,sac2,sac1g,sac2,sac1g,lac4
+DCsac1g,sac2,sac1g,sac2,sac1g,sac4
+SPV1G*409,V21*409,V1G*409,V21*409,V1G*409,V4G*409
+a6=-DPART1*tnoo1
+b6=DPART2*tnoo2
+c6=-DPART1*tnoo3
+d6=DPART2*tnoo4
+e6=-DPART1*tnoo5
+f6=DALL2*tnoo6
+PRa6,b6,c6,d6,e6,f6
+BGABCDEF
+AMABCDEF
+JP#period1,period=1       周期为1时，跳到周期为1的程序里
+JP#period2,period=2       周期为2时，跳到周期为2的程序里
+JP#period4,period=4       周期为4时，跳到周期为4的程序里
+JP#period6,period=6       周期为6时，跳到周期为6的程序里，最终只选择二四六的速度，一三五的速度是跟着二四六轴的速度变的。
+#period1                  周期为1时的程序,只设定二四六轴的速度V21.
+ACsac1g,sac2,sac1g,sac2,sac1g,sac2
+DCsac1g,sac2,sac1g,sac2,sac1g,sac2
+SPV1G*409,V21*409,V1G*409,V21*409,V1G*409,V21*409
+a7=DPART1*tnoo1
+b7=-DPART2*tnoo2
+c7=DPART1*tnoo3
+d7=-DPART2*tnoo4
+e7=DPART1*tnoo5
+f7=-DPART2*tnoo6
+PRa7,b7,c7,d7,e7,f7
+BGABCDEF
+AMABCDEF
+JP#ST11,Start=0                 如果停止键按下时跳到停止程序，147行。
+a8=-DPART1*tnoo1
+b8=DPART2*tnoo2
+c8=-DPART1*tnoo3
+d8=DPART2*tnoo4
+e8=-DPART1*tnoo5
+f8=DPART2*tnoo6
+PRa8,b8,c8,d8,e8,f8
+BGABCDEF
+AMABCDEF
+JP#ST11,Start=0
+JP#period1
+#ST11       停止程序，要求停止后要回到零点。
+STABCDEF
+AMABCDEF
+AC200000,200000,200000,200000,200000,200000
+DC200000,200000,200000,200000,200000,200000
+JG-20000,-20000,-20000,-20000,-20000,-20000
+HMABCDEF
+BGABCDEF
+AMABCDEF
+JP#C         回零后跳到程序到，重新选择怎么走。
+#period2         周期为2的程序，只设定二四六轴的速度V21.
+V2=V1G*period                   这里的速度要改变，因为周期是2，一三五的轴的速度得是原来的2倍。
+sac1g=@INT[(V2*V2/(L12*2))]*409             加速度，周期为2时的加速度
+ACsac1g,sac2,sac1g,sac2,sac1g,sac2
+DCsac1g,sac2,sac1g,sac2,sac1g,sac2
+SPV2*409,V21*409,V2*409,V21*409,V2*409,V21*409
+a12=DPART1*tnoo1               这些变量是六轴走的距离
+b12=-DPART2*tnoo2
+c12=DPART1*tnoo3
+d12=-DPART2*tnoo4
+e12=DPART1*tnoo5
+f12=-DPART2*tnoo6
+PRa12,b12,c12,d12,e12,f12       设好距离后
+BGABCDEF                               开始运动
+AMACE                                     等一三五轴走到头时往回走，而二四六轴才走了一半。
+JP#ST12,Start=0                       这时如果按下停止键，会跳到停止程序里192行。
+a22=-DPART1*tnoo1                 这些变量也是六轴走的距离
+b22=DPART2*tnoo2
+c22=-DPART1*tnoo3
+d22=DPART2*tnoo4
+e22=-DPART1*tnoo5
+f22=DPART2*tnoo6
+PRa22,,c22,,e22                         一三五轴往回走的程序。
+BGACE
+AMABCDEF
+JP#ST12,Start=0                          这时如果按下停止键，会跳到停止程序里192行。
+PRa12,b22,c12,d22,e12,f22           以下同理
+BGABCDEF
+AMACE
+JP#ST12,Start=0
+PRa22,,c22,,e22
+BGACE
+AMABCDEF
+JP#ST12,Start=0
+JP#period2
+#ST12                         停止程序，停止之后会回零
+STABCDEF
+AMABCDEF
+AC200000,200000,200000,200000,200000,200000
+DC200000,200000,200000,200000,200000,200000
+JG-20000,-20000,-20000,-20000,-20000,-20000
+HMABCDEF
+BGABCDEF
+AMABCDEF
+JP#C                              回到零之后会重新选择。
+#period4                      周期为4时的程序与周期为2的同理。
+V4=V1G*period
+sac1g=@INT[(V4*V4/(L12*2))]*409
+ACsac1g,sac2,sac1g,sac2,sac1g,sac2
+DCsac1g,sac2,sac1g,sac2,sac1g,sac2
+SPV4*409,V21*409,V4*409,V21*409,V4*409,V21*409
+a14=DPART1*tnoo1
+b14=-DPART2*tnoo2
+c14=DPART1*tnoo3
+d14=-DPART2*tnoo4
+e14=DPART1*tnoo5
+f14=-DPART2*tnoo6
+PRa14,b14,c14,d14,e14,f14
+BGABCDEF
+AMACE
+JP#ST14,Start=0
+a24=-DPART1*tnoo1
+b24=DPART2*tnoo2
+c24=-DPART1*tnoo3
+d24=DPART2*tnoo4
+e24=-DPART1*tnoo5
+f24=DPART2*tnoo6
+PRa24,,c24,,e24
+BGACE
+AMACE
+PRa14,,c14,,e14
+BGACE
+AMACE
+PRa24,,c24,,e24
+BGACE
+AMACE
+JP#ST14,Start=0
+PRa14,b24,c14,d24,e14,f24
+BGABCDEF
+AMACE
+JP#ST14,Start=0
+PRa24,,c24,,e24
+BGACE
+AMACE
+PRa14,,c14,,e14
+BGACE
+AMACE
+PRa24,,c24,,e24
+BGACE
+AMACE
+JP#ST14,Start=0
+JP#period4
+#ST14
+STABCDEF
+AMABCDEF
+AC200000,200000,200000,200000,200000,200000
+DC200000,200000,200000,200000,200000,200000
+JG-20000,-20000,-20000,-20000,-20000,-20000
+HMABCDEF
+BGABCDEF
+AMABCDEF
+JP#C
+#period6                                   周期为6的程序，与周期为2的一样。
+V6=V1G*period
+sac1g=@INT[(V6*V6/(L12*2))]*409
+ACsac1g,sac2,sac1g,sac2,sac1g,sac2
+DCsac1g,sac2,sac1g,sac2,sac1g,sac2
+SPV6*409,V21*409,V6*409,V21*409,V6*409,V21*409
+a16=DPART1*tnoo1
+b16=-DPART2*tnoo2
+c16=DPART1*tnoo3
+d16=-DPART2*tnoo4
+e16=DPART1*tnoo5
+f16=-DPART2*tnoo6
+PRa16,b16,c16,d16,e16,f16
+BGABCDEF
+AMACE
+JP#ST16,Start=0
+a26=-DPART1*tnoo1
+b26=DPART2*tnoo2
+c26=-DPART1*tnoo3
+d26=DPART2*tnoo4
+e26=-DPART1*tnoo5
+f26=DPART2*tnoo6
+PRa26,,c26,,e26
+BGACE
+AMACE
+PRa16,,c16,,e16
+BGACE
+AMACE
+PRa26,,c26,,e26
+BGACE
+AMACE
+PRa16,,c16,,e16
+BGACE
+AMACE
+PRa26,,c26,,e26
+BGACE
+AMACE
+JP#ST16,Start=0
+PRa16,b26,c16,d26,e16,f26
+BGABCDEF
+AMACE
+JP#ST16,Start=0
+PRa26,,c26,,e26
+BGACE
+AMACE
+PRa16,,c16,,e16
+BGACE
+AMACE
+PRa26,,c26,,e26
+BGACE
+AMACE
+PRa16,,c16,,e16
+BGACE
+AMACE
+PRa26,,c26,,e26
+BGACE
+AMACE
+JP#ST16,Start=0
+JP#period6
+#ST16
+STABCDEF
+AMABCDEF
+AC200000,200000,200000,200000,200000,200000
+DC200000,200000,200000,200000,200000,200000
+JG-20000,-20000,-20000,-20000,-20000,-20000
+HMABCDEF
+BGABCDEF
+AMABCDEF
+JP#C
+EN

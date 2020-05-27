@@ -1,0 +1,17 @@
+[Header Microsoft Windows NT 5.1.2600 Service Pack 3]
+2013-01-24 15:01:00,250 [2] ERROR Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase [(null)] - Error when destroying OPC server for controller 'Controller2'
+System.Runtime.InteropServices.COMException (0x80040200): Exception from HRESULT: 0x80040200
+   at System.Runtime.InteropServices.ComTypes.IConnectionPoint.Unadvise(Int32 dwCookie)
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.z()
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.DestroyOPCServer()
+2013-01-24 15:01:00,250 [2] ERROR Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase [(null)] - Error when destroying OPC server for controller 'Controller1'
+System.Runtime.InteropServices.COMException (0x80040200): Exception from HRESULT: 0x80040200
+   at System.Runtime.InteropServices.ComTypes.IConnectionPoint.Unadvise(Int32 dwCookie)
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.z()
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.DestroyOPCServer()
+2013-01-24 15:01:00,250 [2] ERROR Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase [(null)] - Error when destroying OPC server for controller 'B140'
+System.Runtime.InteropServices.COMException (0x80040200): Exception from HRESULT: 0x80040200
+   at System.Runtime.InteropServices.ComTypes.IConnectionPoint.Unadvise(Int32 dwCookie)
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.z()
+   at Neo.ApplicationFramework.Tools.OpcClient.DataSourceOpcClassicBase.DestroyOPCServer()
+[Footer]

@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tools</name>
+    </assembly>
+    <members>
+        <member name="M:Neo.ApplicationFramework.Tools.OpcClient.Bindings.DataItemWpfBindingSourceProvider.GetDataItemName(System.Windows.Data.Binding)">
+            <summary>
+            Stolen from DependencyObjectPropertyBinder.
+            </summary>
+            <param name="binding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Screen.Bindings.TraversingLocalPropertyTypeResolver">
+            <summary>
+            Finds a "local property" by traversing up the visual tree to find an ancestor of type IScreenWindow.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Security.SecurityGroupsConverter">
+            <summary>
+            Type converter for the <see cref="T:Neo.ApplicationFramework.Interfaces.SecurityGroups"/> enumeration.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityGroupsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"></see> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type"></see> that represents the type you want to convert from.</param>
+            <returns>
+            true if this converter can perform the conversion; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityGroupsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"></see> that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"></see> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object"></see> to convert.</param>
+            <returns>
+            An <see cref="T:System.Object"></see> that represents the converted value.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The conversion cannot be performed. </exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityGroupsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the given value object to the specified type, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"></see> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"></see>. If null is passed, the current culture is assumed.</param>
+            <param name="value">The <see cref="T:System.Object"></see> to convert.</param>
+            <param name="destinationType">The <see cref="T:System.Type"></see> to convert the value parameter to.</param>
+            <returns>
+            An <see cref="T:System.Object"></see> that represents the converted value.
+            </returns>
+            <exception cref="T:System.NotSupportedException">The conversion cannot be performed. </exception>
+            <exception cref="T:System.ArgumentNullException">The destinationType parameter is null. </exception>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.TimerService.TimerTool.#ctor">
+            <summary>
+            Initializes a new instance of the BacklightTool class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.DateTimeEdit.DateTimeEditTool.#ctor">
+            <summary>
+            Initializes a new instance of the DateTimeEditTool class.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.DelayInput.DelayWindow">
+            <summary>
+            DelayWindow
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.DelayInput.DelayWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.EventMapper.EventMapperTool.#ctor">
+            <summary>
+            Initializes a new instance of the EventMapperTool class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.HardCoded.ActionMapperService.#ctor">
+            <summary>
+            Initializes a new instance of the ActionMapperService class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.HardCoded.MessageFilter.#ctor">
+            <summary>
+            Initializes a new instance of the MessageFilter class.
+            </summary>  
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Messagebox.MessageBoxFX">
+            <summary>
+            Interaction logic for MessageBoxFX.xaml
+            </summary>
+            <summary>
+            MessageBoxFX
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Messagebox.MessageBoxFX.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Messagebox.MessageBoxService.GetDefaultFormattedText(System.String)">
+            <summary>
+            Returns a textblock with same parameters as if the Show method is called with a string as argument.
+            The MessageBoxFX class now has a content property instead of a text property.
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.MultiLanguage.FrameworkElementFinder.FindElement(System.String,System.Collections.IEnumerable)">
+            <summary>
+            Find an element, given its name, by searching a collection of FrameworkElement recursively.
+            </summary>
+            <param name="elementName">The name of the FrameworkElement you want to find.</param>
+            <param name="elementCollection">The collection to search.</param>
+            <returns>The found FrameworkElement, or null if it could not find one with that name in the tree.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.MultiLanguage.FrameworkElementFinder.FindElement(System.String[],System.Int32,System.Collections.IEnumerable)">
+            <summary>
+            Find an element, given its name path, by searching a collection of FrameworkElements.
+            </summary>
+            <param name="elementNameParts">An array of the name parts.</param>
+            <param name="index">The name part to use.</param>
+            <param name="elementCollection">The collection to search.</param>
+            <returns>The found FrameworkElement, or null if it could not find one with that name in the tree.</returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Recipe.RecipeTool.RegisterServices">
+            <summary>
+            All services provided by the tool should be registered here.
+            Register services is called first for every tool, before any of them are being initialized.
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Recipe.SelectRecipeDialog">
+            <summary>
+            SelectRecipeDialog
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Recipe.SelectRecipeDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Security.ChangePasswordDialog">
+            <summary>
+            ChangePasswordDialog
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.ChangePasswordDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Security.LoginDialog">
+            <summary>
+            LoginDialog
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.LoginDialog.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.Security.SecurityManagerToolFX">
+            <summary>
+            The SecurityManagerToolFX is making sure that the right security level to access the objects .
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityManagerToolFX.Init">
+            <summary>
+            Initializes the tool, all services should now have been registered, but the message pump is not up.
+            It's now possible to connect to other services, since they should all have been registered.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityManagerToolFX.IsAccessGranted(System.Object,System.Object)">
+            <summary>
+            Checks if the current user has enough security to access control.
+            </summary>
+            <param name="secureObject">The object to check access against.</param>
+            <param name="rootObject">Only used for performance reasons in CE.</param>
+            <returns>
+            True if access is granted, false otherwise.
+            </returns>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityManagerToolFX.UpdateVisibility">
+            <summary>
+            Updates the visibility for all containing objects,
+            depending on the security level for the current user.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Security.SecurityManagerToolFX.UpdateVisibility(System.Object)">
+            <summary>
+            Updates the visibility for all containing objects,
+            depending on the security level for the current user.
+            </summary>
+            <param name="rootObject">Root object to update visibility for.</param>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Symbol.Service.SymbolInfo.#ctor(System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor for design time.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Symbol.Service.SymbolInfo.#ctor(System.String,System.Int32,System.Int32,System.Boolean,System.IO.Stream)">
+            <summary>
+            Constructor for runtime when fileName doesn't exist
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Symbol.Service.SymbolServiceFX.#ctor">
+            <summary>
+            Initializes a new instance of the SymbolLibraryService class.
+            </summary>
+        </member>
+        <member name="M:Neo.ApplicationFramework.Tools.Symbol.Service.SymbolServiceFX.GetSymbolName(System.String)">
+            <summary>
+            Creates a symbol name from the symbol path.
+            </summary>
+            <param name="symbolPath">The full path to the symbol.</param>
+            <returns>A symbol name.</returns>
+        </member>
+        <member name="T:Neo.ApplicationFramework.Tools.ToolManager.ToolMgr">
+            <summary>
+            Partial class used with .Net framework
+            </summary>
+        </member>
+    </members>
+</doc>

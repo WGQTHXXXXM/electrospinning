@@ -1,0 +1,536 @@
+#AUTO
+WT6000
+IHC=>-2     清空C端口
+WT2000
+IHD=>-2
+IHC=192,168,1,5<1000>2    由C端口，主卡与从卡4183通讯
+WT2000            
+IHD=192,168,1,6<1001>2    由D端口，主卡与从卡47120通讯
+WT2000       定义初始化变量
+Start=0      启动键
+NoZero=0     喷头六轴回零键
+ttimes=0     次数显示
+FeedPump=0   供料泵键
+Light=0      照明灯键
+Exhaust=0    排风键
+NePre=0      负压键
+BeltHeat=0   刚带加热键
+SolCr2=0     浓度1和2
+SolCl1=0
+Humid1=0     湿度
+Temp1=0      温度
+MeZero=0     清零键
+AGFS=0       放卷张力设定
+AGSS=0       收卷张力设定
+Belt=0       刚带启动键
+L11=0        喷头 一三五和二四六的L1,L2,L3,L4,V距离
+L12=0
+L13=0
+L14=0
+V11=0
+L21=0
+L22=0
+L23=0
+L24=0
+V21=0
+stibtp=0     设定刚带温度
+nhBelt=0     无基膜刚带启动键
+ibdirn=0     刚带方向显示
+ibdirr=0
+tnlt2=0      转0-90度显示键
+tnlt4=0
+tnlt6=0
+bbg=0        升降开始键
+efbg=0       推杆开始键
+Z=0          设定刚带第一次走的方向
+amount=0     计数用中间变量
+statn1=0     喷头转0-90度启动键
+statn3=0
+statn5=0
+tnoo1=0      喷头六轴选择键
+tnoo2=0
+tnoo3=0
+tnoo4=0
+tnoo5=0
+tnoo6=0
+period=0     周期倍数选择
+tp1=0        计数的中间变量
+GW=0         设定的温度值
+XQ#MTIMES,1
+XQ#BOOL,2
+XQ#MPROEX,3
+XQ#ST,4
+XQ#NHBLET,6
+XQ#HOMEB,7
+SHACDEFG     只有B轴没有使能。因其抱闸
+#MVARIB      0通道
+SAC="XQ#A"   启动从卡4183的程序
+WT10
+#VARIB       
+SAC="Start="Start    把主卡变量发给从卡4183，时时更新变量的状态。
+WT10
+SAC="period="period
+WT10
+SAC="NoZero="NoZero
+WT10
+SAC="L11="L11
+WT10
+SAC="L12="L12
+WT10
+SAC="L13="L13
+WT10
+SAC="L14="L12
+WT10
+SAC="V11="V11
+WT10
+SAC="L21="L21
+WT10
+SAC="L22="L22
+WT10
+SAC="L23="L23
+WT10
+SAC="L24="L22
+WT10
+SAC="V21="V21
+WT10
+SAC="Belt="Belt
+WT10
+SAC="statn1="statn1
+WT10
+SAC="statn3="statn3
+WT10
+SAC="statn5="statn5
+WT10
+SAC="MG@AN[2]"    读从卡模拟量2(湿度)赋给MHumid1
+WT10
+MHumid1=_SAC0
+Humid1=((MHumid1-1.9)/0.076)  运算成百分
+SAC="MG@AN[1]"    读从卡模拟量1（温度）赋给Mtemp1
+WT10
+Mtemp1=_SAC0
+Temp1=((Mtemp1-1.9)/0.152)    运算成50分
+SAC="tnoo1="tnoo1      喷头一到六轴的选择，以下是把是否选择发送过去。
+WT10
+SAC="tnoo2="tnoo2
+WT10
+SAC="tnoo3="tnoo3
+WT10
+SAC="tnoo4="tnoo4
+WT10
+SAC="tnoo5="tnoo5
+WT10
+SAC="tnoo6="tnoo6
+WT10
+SAC="MG@AN[3]"        读从卡模拟量3（浓度1）送给rsolCl1
+WT10
+rsolCl1=_SAC0
+SolCl1=((rsolCl1-1.9)/0.076)     百分后
+SAC="MG@AN[4]"        读从卡模拟量4（浓度2）送给rsolCr2
+WT10
+rsolCr2=_SAC0
+SolCr2=((rsolCr2-1.9)/0.076)     百分后
+WT10
+SAC="TPA"   把从卡的A轴位置读出来送给fx
+WT10
+fx=_SAC0    
+fx1=fx/409   fx1是屏幕上的显示，以下同理到F轴
+SAC="TPB"
+WT10
+fy=_SAC0
+fy1=fy/409
+SAC="TPC"
+WT10
+fz=_SAC0
+fz1=fz/409
+SAC="TPD"
+WT10
+fw=_SAC0
+fw1=fw/409
+SAC="TPE"
+WT10
+fe=_SAC0
+fe1=fe/409
+SAC="TPF"
+WT10
+ff=_SAC0
+ff1=ff/409
+IF(Light=1)    灯开关
+SB3016
+ENDIF
+IF(Light=0)
+CB3016
+ENDIF
+IF(Exhaust=1)    排风开关
+SB3012
+ENDIF
+IF(Exhaust=0)
+CB3012
+ENDIF
+IF(NePre=1)     负压开关
+SB3010
+ENDIF
+IF(NePre=0)
+CB3010
+ENDIF
+IF(BeltHeat=1)    刚带加热开关
+SB3001
+ENDIF
+IF(BeltHeat=0)  
+CB3001
+ENDIF
+IF(SolCl1>25|SolCr2>25)   浓度大于25报警关刚带，负压，六轴等，并强排风。
+Belt=0   刚带
+nhBelt=0    无基膜刚带
+BeltHeat=0    刚带加热
+FeedPump=0    供料泵
+NePre=0     负压
+Start=0     六轴
+SB3012      
+SB3014     强排风
+WT10000
+ENDIF
+IF(SolCl1<25|SolCr2<25)    浓度小于25不报警，强排风关。
+CB3014     强排风关
+ENDIF
+JP#VARIB    跳回程序头#VARIB
+EN
+#BOOL
+ct=0
+IF((@IN[9]=1)&(@IN[10]=0))   当输入9有时是转到90度，当输入10有时是转到0度
+tnlt2=1      屏幕上的第一轴0-90度输出状态,以下同理是第三轴和第五轴
+ENDIF
+IF((@IN[9]=0)&(@IN[10]=1))
+tnlt2=0
+ENDIF
+IF((@IN[5]=1)&(@IN[6]=0))    第三轴
+tnlt4=1
+ENDIF
+IF((@IN[6]=1)&(@IN[5]=0))
+tnlt4=0
+ENDIF
+IF((@IN[7]=1)&(@IN[8]=0))    第五轴
+tnlt6=1
+ENDIF
+IF((@IN[8]=1)&(@IN[7]=0))
+tnlt6=0
+ENDIF
+IF((Belt=0)&(nhBelt=0))   刚带加热限制条件，如果刚带没有启动
+BeltHeat=0     刚带不能加热。
+ENDIF
+IF(MeZero=1)   清零键按下时
+ttimes=0       次数等于0
+ENDIF
+IF(BeltHeat=1)   刚带加热键按下时
+GW=stibtp/10    把设定温度变成电压
+SAD="GW="GW     把电压发到47120里
+WT10
+ihtlt=1         加热图标变绿色
+JP#looptp,ct=1  这个循环是为了只执行一次启动。
+tp1=0
+SAD="XQ#A"
+WT10
+ct=ct+1
+#looptp
+ENDIF
+WT10
+SAD="MG@AN[1]"    把温度读出来
+WT10
+gdwd=_SAD0
+gdtemp=@RND[gdwd/0.1]  算完后显示给触摸屏
+IF(BeltHeat=0)    当刚带加热关闭时
+ihtlt=0        加热图标变红色
+JP#looptp1,tp1=1   以下循环是为了只复位一次
+SAD="RS"
+WT10
+ct=0
+tp1=tp1+1
+#looptp1
+ENDIF
+IF(FeedPump=1)   供料泵键开 
+g=@RND[5120/108*fdfls]   运算的是单位（ML/H）,fdfls是供料流量设定
+JG,,,,,,g
+BGG
+ENDIF
+IF(FeedPump=0)    供料泵键关时，速度就为0
+JG,,,,,,0
+BGG
+ENDIF
+fdflr=_SPG/5120*108  供料多少显示
+IF(@IN[2]=1|SolCl1>25|SolCr2>25)    当门开时或浓度大于25时，输入点2是门的开关
+error1=1    屏幕上报警灯亮。
+CB13        机械上的绿灯关
+ENDIF
+IF(@IN[2]=0|SolCl1<25|SolCr2<25)    当门关时或浓度小于25时
+error1=0     屏幕上报警灯不亮
+SB13         机械上的绿灯开
+ENDIF
+IF(@IN[2]=1)     门开了
+SB12             黄灯亮。
+ENDIF
+IF(@IN[2]=0)     门关了
+CB12             黄灯关
+ENDIF
+IF(SolCl1>25|SolCr2>25)    浓度过高
+SB10      蜂鸣器响
+SB11      机械上的红灯亮
+ENDIF
+IF(SolCl1>25|SolCr2>25)     浓度正常
+CB10          蜂鸣器不响
+CB11          机械上的红灯也不亮了
+ENDIF
+JP#BOOL        跳回到程序头
+EN
+#MPROEX 
+IF(efbg=1)     推杆开始键下时
+efrd=1         推杆开始键旁边的红灯亮，
+SP,,,,16384,16384   以下就是EF回零
+FEEF
+BGEF
+AMEF
+SP,,,,1000,1000
+FIEF
+BGEF
+AMEF
+SP,,,,30000,30000
+E=stefp*16384+5000    stefp是输入推多少的距离。
+F=stefp*16384         
+PA,,,,E,F               然后把EF值送给PA
+BGEF
+AMEF                  推杆动作结束后
+WT500
+efrd=0                  红灯灭
+STEF
+DP,,,,0,0
+ENDIF
+JP#MPROEX,(nhBelt=0)&(Belt=0)     不满意可以重推多少距离
+#LP
+JP#LP,(nhBelt=0)&(Belt=0)      等待刚带启动
+#PROEX
+BeltC1=@AN[1]/0.1      屏幕上的纠偏显示
+IF(BeltC1<45)          当纠偏大于45时开始动作
+SP,,,,5000,5000
+PA,,,,15000,-15000     E轴向正方向走15000个脉冲，大约1毫米。F轴向反方向走相同距离
+BGEF
+AMEF
+ENDIF
+IF((BeltC1<55)&(BeltC1>45))    当纠偏在45到55之间时 
+SP,,,,5000,5000
+PA,,,,0,0                      E，F轴回到定义的零点位置
+BGEF
+AMEF
+ENDIF
+IF(BeltC1>55)                   当纠偏大于55时
+SP,,,,5000,5000
+PA,,,,-15000,15000          E轴向反方向走15000个脉冲，大约1毫米。F轴向正方走相同距离
+BGEF
+AMEF
+ENDIF
+JP#PROEX
+EN
+
+
+#MTIMES
+#Q
+JP#Q,Belt=0      刚带按扭按下前等待
+IF(Z=0)          刚带启动后当选择正向时
+ttimes=-1        定义次数为零
+XQ#MSPN,5        启动正向
+ENDIF
+IF(Z=1)          刚带启动后当选择反向时 
+ttimes=-1        定义次数为零
+XQ#MSPR,5        启动反向
+ENDIF
+#AGN
+irspr=@ABS[_TVA/10250]     屏幕上显示刚带速度
+fjspeed=@ABS[_TVA/10250]   屏幕上显示收放卷速度
+sjspeed=@ABS[_TVA/10250]
+AGSR1=@AN[6]               收放卷的模拟量反馈是多少
+AGFR1=@AN[7]
+VFSIG=AGFS/5               设定收放卷的张力
+VSSIG=AGSS/5
+IF(ibdirn=1)               屏幕上显示的正向箭头还是反向箭头
+P=0.5                      p是设定与实际作差的倍数
+ENDIF
+IF(ibdirn=0)
+P=-0.5
+ENDIF
+diancbk=666/3.14159/nr     电子齿轮比
+diancbm=666/3.14159/hr
+flot=(diancbk-diancbm)/AllLong
+C=(-diancbk+(amount*flot)+(P*(AGSR1-VSSIG)))
+D=(-diancbm-(amount*flot)-(P*(AGFR1-VFSIG)))
+GA,,A,A           -diancbk+(amount*flot)是成线性增长或减小，
+GR,,C,D           (P*(AGSR1-VSSIG))是把反馈与设定作差参与到闭环
+WT50
+AGFR=AGFR1*5        屏幕上的放卷反馈多少牛
+AGSR=AGSR1*5        屏幕上的收卷反馈多少牛
+JP#LP3,nhBelt=1     当无基膜刚带启动键按下时，要求电子齿轮比是零。
+JP#AGN
+#LP3
+GR,,0,0             无基膜模式刚带启动时设定电子齿轮比为零
+JP#AGN,nhBelt=0     无基膜模式刚带关闭时电子齿轮比回到设定的程序
+JP#LP3
+EN
+
+
+#NHBLET
+JP#NHBLET,nhBelt=0   无基膜刚带启动选择正向还是反向
+ttimes=-1            次数初始一下
+IF(Z=0)              如果是正向
+JP#NMSPN             跳到#NMSPN正向程序
+ENDIF
+IF(Z=1)              如果是反向
+ttimes=-1
+JP#NMSPR             跳到#NMSPR反向程序     
+ENDIF
+#NMSPN               正向走的程序
+ttimes=ttimes+1      计次数
+STA                  
+WT2000
+Count=0              米数初始
+DP0                  
+#NNGOON
+JGIRSP*10250         IRSP是设定钢带的速度
+BGA                
+ibdirn=1             屏幕上的正方向箭头开
+ibdirr=0             屏幕上的反方向箭头关
+#NNCOUNT             
+JP#NSTOPBN,nhBelt=0   刚带停止键按下时，跳到停止程序。
+tpa=_TPA
+amount=@ABS[tpa/615000]   计走了多少米数
+Count=amount
+JP#NMSPR,Count>=stct   次数到后跳到反向程序轴会停止
+JP#NNCOUNT             否则继续计数  
+#NSTOPBN               停止程序
+STA
+AMA
+#NSTBN
+JP#NNGOON,nhBelt=1     当再次点下刚带启动时，跳到#NNGOON程序再走
+JP#NSTBN
+
+#NMSPR                 无基膜反向程序，跟正向一样
+ttimes=ttimes+1
+STA
+WT2000
+Count=0
+DP0
+#NRGOON
+JG-IRSP*10250
+BGA
+ibdirn=0
+ibdirr=1
+#NRCOUNT
+JP#NSTOPBR,nhBelt=0
+tpa=_TPA
+amount=@ABS[tpa/615000]
+Count=amount
+JP#NMSPN,Count>=stct
+JP#NRCOUNT
+#NSTOPBR
+STA
+AMA
+#NSTBR
+JP#NRGOON,nhBelt=1
+JP#NSTBR
+EN
+
+
+#MSPN           有基膜刚带程序，与无基膜一样,多个计数清零
+ttimes=ttimes+1
+STA
+WT2000
+Count=0
+DP0
+zero=0
+#NGOON
+JGIRSP*10250
+BGA
+ibdirn=1
+ibdirr=0
+#NCOUNT
+JP#STOPBN,Belt=0
+#LP4
+JP#LP4,MeZero=1
+tpa=_TPA                   这块是怎么清零的
+amount=@ABS[tpa/615000]    计数
+Count=amount-zero          计数清零
+IF(MeZero=1)               当米数清零按下时
+zero=Count                 重新给zero赋值
+ENDIF
+JP#MSPR,Count>=stct
+JP#NCOUNT
+#STOPBN
+STA
+AMA
+#STBN
+JP#NGOON,Belt=1
+JP#STBN
+EN
+#MSPR                      有基膜反向程序,与有基膜正向程序一样
+ttimes=ttimes+1
+STA
+WT2000
+Count=0
+DP0
+zero=0
+#RGOON
+JG-IRSP*10250
+BGA
+ibdirn=0
+ibdirr=1
+#RCOUNT
+JP#STOPBR,Belt=0
+#LP5
+JP#LP5,MeZero=1
+tpa=_TPA
+amount=@ABS[tpa/615000]
+Count=amount-zero
+IF(MeZero=1)
+zero=amount
+ENDIF
+JP#MSPN,Count>=stct
+JP#RCOUNT
+#STOPBR
+STA
+AMA
+#STBR
+
+JP#STBR
+EN
+#HOMEB            调节升降轴高度程序
+IF(bbg=1)
+SHB
+WT10
+SP,40000
+FEB
+BGB
+AMB
+SP,1000
+FIB
+BGB
+AMB
+STB
+DP0
+SP,81920
+distanB=stbdis*26426-1321300   stbdis是设定的距离,
+PA,distanB           这里是针到钢带的距离不是升降的距离。
+BGB
+AMB
+MOB
+ENDIF
+bdis=_TPB/26426       
+JP#HOMEB
+EN
+#ST     次数到达后停止程序
+JP#ST,((Belt=0)&(nhBelt=0))    
+#B
+IF(ttimes=sttm)     如果次数到达之后
+Belt=0              以下是停止动作。
+nhBelt=0
+Start=0
+ttimes=0
+ibdirn=0
+ibdirR=0
+ENDIF
+JP#ST
+EN
